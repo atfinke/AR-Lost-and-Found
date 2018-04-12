@@ -34,7 +34,21 @@ class LostItemManager {
     static private let itemEmojiMap = [
         "MiscellaneousPortfolio": "💼",
         "Carry Bag / LuggageBriefcase": "💼",
+        "Carry Bag / LuggageBackpack": "🎒",
+        "Carry Bag / LuggageShoulder bag": "👜",
+        "Carry Bag / LuggageTote bag": "👜",
+        "Carry Bag / LuggageHandbag": "👜",
+        "Carry Bag / LuggageShopping bag": "🛍️",
         "JewelryWatch": "⌚️",
+        "ElectronicsComputer Accessories": "⌨️",
+        "Home FurnishingsDishware": "🍽️ ",
+        "Sports EquipmentBicycle": "🚲",
+        "CurrencyForeign Currency": "💷",
+        "AccessoriesHat": "🎩",
+        "AccessoriesGloves": "🥊 ",
+        "Eye WearSunglasses": "🕶️",
+        "FootwearSneakers": "👟",
+        "IdentificationDebit Card": "💳",
         ]
 
     static private let categoryEmojiMap = [
@@ -95,6 +109,9 @@ class LostItemManager {
                                                 emoji: emoji,
                                                 diff: countDiff)
                     allDiffItems.append(itemDiff)
+
+                    print(newItemRecord)
+                    print(countDiff)
                 } else {
                     // no emoji set
                     print(newItemRecord)

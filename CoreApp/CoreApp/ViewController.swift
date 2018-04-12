@@ -45,7 +45,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         gestureRecognizer.numberOfTouchesRequired = 1
         sceneView.addGestureRecognizer(gestureRecognizer)
 
-        scene.physicsWorld.gravity = SCNVector3(0.0, -1.0, 0.0)
+        scene.physicsWorld.gravity = SCNVector3(0.0, -0.6, 0.0)
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -78,11 +78,11 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
 
         func qRand() -> CGFloat {
-            return CGFloat(Float(arc4random()) / Float(UINT32_MAX)) * 0.25
+            return CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         }
 
         for (index, node) in nodes.enumerated() {
-            node.position = SCNVector3(0, 0, 0.5 + qRand() * CGFloat(index))
+            node.position = SCNVector3(0, 0, qRand() + 0.75)
             lastPlane?.addChildNode(node)
         }
     }
